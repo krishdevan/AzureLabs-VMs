@@ -57,7 +57,7 @@ Configuration ConfigureMS
         } # end Node
 } # end Configuration
 
-ConfigureMS -ComputerName ServerMS1
+ConfigureMS -ComputerName ServerMS1 -out "$env:TEMP/DSC/ConfigureMS"
 
 #########################################################################
 # NOTES:
