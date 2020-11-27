@@ -56,7 +56,7 @@ Configuration ConfigureDC
         } # end Node
 } # end Configuration
 
-ConfigureDC -ComputerName ServerDC1
+ConfigureDC -ComputerName ServerDC1 -out "$env:TEMP/DSC/ConfigureDC"
 
 #########################################################################
 # NOTES:
