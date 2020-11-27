@@ -56,7 +56,7 @@ Configuration ConfigureClient
         } # end Node
 } # end Configuration
 
-ConfigureClient -ComputerName Client1
+ConfigureClient -ComputerName Client1 -out "$env:TEMP/DSC/ConfigureClient"
 
 #########################################################################
 # NOTES:
