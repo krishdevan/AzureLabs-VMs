@@ -56,12 +56,12 @@ Configuration ConfigureClient
         } # end Node
 } # end Configuration
 
-ConfigureClient -ComputerName Client1 -out "$env:TEMP/DSC/ConfigureClient"
+ConfigureClient -ComputerName Client1 -out "$env:LOCALAPPDATA\DSC\ConfigureClient"
 
-#########################################################################
+######################################################################################################
 # NOTES:
-# 1. Create a folder $env:TEMP\DSC and save this file in there
-# 2. Run this script from that folder. 
-# 3. It will create another sub-folder "ConfigureClient" with two .MOF files
+# 1. Create a folder $env:LOCALAPPDATA\DSC and save this file in there
+# 2. Run this script from that folder. (powershell $env:LOCALAPPDATA\DSC\ConfigureClient.ps1
+# 3. It will create another sub-folder "$env:LOCALAPPDATA\DSC\ConfigureClient" with two .MOF files
 # 4. Later you will copy these files to the Win10-Client VM
-#########################################################################
+######################################################################################################
