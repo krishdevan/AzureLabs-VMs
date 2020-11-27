@@ -56,12 +56,12 @@ Configuration ConfigureDC
         } # end Node
 } # end Configuration
 
-ConfigureDC -ComputerName ServerDC1 -out "$env:TEMP/DSC/ConfigureDC"
+ConfigureDC -ComputerName ServerDC1 -out "$env:LOCALAPPDATA/DSC/ConfigureDC"
 
-#########################################################################
+#############################################################################################
 # NOTES:
-# 1. Create a folder $env:TEMP\DSC and save this file in there
-# 2. Run this script from that folder. 
-# 3. It will create another sub-folder "ConfigureDC" with two .MOF files
+# 1. Create a folder $env:LOCALAPPDATA\DSC and save this file in there
+# 2. Run this script from that folder. (powershell $env:LOCALAPPDATA\DSC\ConfigureDC.ps1
+# 3. It will create another sub-folder "$env:LOCALAPPDATA\DSC\ConfigureDC" with two .MOF files
 # 4. Later you will copy these files to the Server2019-DC VM
-#########################################################################
+##############################################################################################
