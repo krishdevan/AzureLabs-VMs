@@ -57,12 +57,12 @@ Configuration ConfigureMS
         } # end Node
 } # end Configuration
 
-ConfigureMS -ComputerName ServerMS1 -out "$env:TEMP/DSC/ConfigureMS"
+ConfigureMS -ComputerName ServerMS1 -out "$env:LOCALAPPDATA\DSC\ConfigureMS"
 
-#########################################################################
+############################################################################################
 # NOTES:
-# 1. Create a folder $env:TEMP\DSC and save this file in there
-# 2. Run this script from that folder. 
-# 3. It will create another sub-folder "ConfigureMS" with two .MOF files
+# 1. On Hyperv 2019 VM, create a folder $env:LOCALAPPDATA\DSC and save this file in there
+# 2. Run this script from that folder. (powershell $env:LOCALAPPDATA\ConfigureMS.ps1)
+# 3. It will create another sub-folder "$env:LOCALAPPDATA\DSC\ConfigureMS" with two .MOF files
 # 4. Later you will copy these files to the Server2016-MS VM
-#########################################################################
+#############################################################################################
