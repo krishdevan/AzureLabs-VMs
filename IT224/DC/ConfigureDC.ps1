@@ -52,6 +52,15 @@ Configuration ConfigureDC
                 InterfaceAlias = 'Ethernet'
                 Address = '192.168.0.100', '1.1.1.1'                
             }
+            
+            # Make Admin Password to not expire
+            User LocalAdmin
+            {
+                UserName = 'Administrator'
+                PasswordNeverExpires = $true
+		        PasswordChangeNotAllowed = $true
+                Description = 'Local Administration Account'                    
+            }
 
         } # end Node
 } # end Configuration
