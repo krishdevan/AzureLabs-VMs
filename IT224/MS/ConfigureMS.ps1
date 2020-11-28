@@ -53,6 +53,15 @@ Configuration ConfigureMS
                 Address = '192.168.0.100', '1.1.1.1'
                 #Validate = $true
             }
+            
+            # Make Admin Password to not expire
+            User LocalAdmin
+            {
+                UserName = 'Administrator'
+                PasswordNeverExpires = $true
+                Description = 'Local Administrator Account'
+                PasswordChangeNotAllowed = $true
+            }
 
         } # end Node
 } # end Configuration
