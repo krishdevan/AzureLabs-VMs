@@ -530,11 +530,11 @@ function Set-HypervDefaults{
 
     # Create virtual switch
     # Set switch as Private -- no routing to the internet
-    if ((Get-VMSwitch | Where-Object -Property Name -EQ "Private").count -eq 0)
-    {
-        write-host "Creating Private VMswitch"
-        New-VMSwitch -SwitchType Private -Name Private
-    }
+    #if ((Get-VMSwitch | Where-Object -Property Name -EQ "Private").count -eq 0)
+    #{
+    #    write-host "Creating Private VMswitch"
+    #    New-VMSwitch -SwitchType Private -Name Private
+    #}
 
     # Add Hyper-V shortcut
     $Shortcut = (New-Object -ComObject WScript.Shell).CreateShortcut($(Join-Path "c:\users\public\Desktop" "Hyper-V Manager.lnk"))
@@ -545,7 +545,6 @@ function Set-HypervDefaults{
     # Setup Hyper-V default file locations
     Set-VMHost -VirtualHardDiskPath "C:\VMs"
     Set-VMHost -VirtualMachinePath "C:\VMs"
-    #Set-VMHost -EnableEnhancedSessionMode:$true
 
     Set-AdminNeverExpire
     Add-DefenderExclusions
